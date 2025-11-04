@@ -1,9 +1,7 @@
-require('config.options')
 require('config.keymaps')
+require('config.options')
 
-require('config.plugins')
-require('config.telescope')
-require('config.treesitter')
+require('config.lazy')
 
 
 
