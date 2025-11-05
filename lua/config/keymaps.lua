@@ -7,7 +7,6 @@ local map = vim.keymap.set
 map('n','<leader>w',':w<CR>',{desc = 'Save file'})
 map('n','<leader>q',':q<CR>',{desc = 'Quit'})
 map('i','`','<Esc>',{desc = 'Escape'})
-map('i','\\','<Esc>',{desc = 'Escape'})
 -- Nvimtree map
 map('n','<C-f>',':NvimTreeOpen<CR>',{})
 

@@ -8,6 +8,7 @@ return {
           "lua", "cpp", "python", "c", "javascript",
           "html", "vimdoc", "query", "markdown",
         },
+        autoinstall = true,
         highlight = { enable = true },
         indent = { enable = true },
       })
