@@ -7,7 +7,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
-vim.opt.smartindent= true
+vim.opt.smartindent = true
 -- UI tweaks
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
@@ -18,7 +18,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Clipboard
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Not sure what these do - chatGPT recommended
 vim.g.loaded_netrw = 1

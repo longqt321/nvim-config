@@ -1,57 +1,56 @@
 return {
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            {'nvim-telescope/telescope-fzf-native.nvim',build='make'},
-        },
-        config = function()
-            
-    local telescope = require('telescope')
-    local actions = require('telescope.actions')
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
+		config = function()
+			local telescope = require("telescope")
+			local actions = require("telescope.actions")
 
-    telescope.setup({
-        defaults = {
-            prompt_prefix= '🔍 ',
-            selection_caret = '',
-            path_display = {'smart'},
-            file_ignore_patterns = {'node_modules','./git','build/','venv'},
-            sorting_strategy = 'ascending',
-            
-            layout_config = {
-                horizontal = {preview_width = 0.55},
-            },
-        },
-        
-        mappings = {
-            i = {
-                ['<esc>'] = actions.close,
-                ['<C-j>'] = actions.move_selection_next,
-                ['<C-k>'] = actions.move_selection_previous,
-            },
-        },
+			telescope.setup({
+				defaults = {
+					prompt_prefix = "🔍 ",
+					selection_caret = "",
+					path_display = { "smart" },
+					file_ignore_patterns = { "node_modules", "./git", "build/", "venv" },
+					sorting_strategy = "ascending",
 
-        pickers = {
-            find_files = {
-                hidden = true,
-            },
-            buffers = {
-                sort_mru = true,
-                ignore_current_buffer = true,
-            },
-        },
+					layout_config = {
+						horizontal = { preview_width = 0.55 },
+					},
+				},
 
-        extensions = {
-            fzf = {
-                fuzzy = true,
-                override_generic_sorter = true,
-                override_file_sorter = true,
-                case_mode = 'smart_case',
-            }
-        },
-    })
+				mappings = {
+					i = {
+						["<esc>"] = actions.close,
+						["<C-j>"] = actions.move_selection_next,
+						["<C-k>"] = actions.move_selection_previous,
+					},
+				},
 
-        pcall(telescope.load_extension,'fzf')
-    end,
-    },
+				pickers = {
+					find_files = {
+						hidden = true,
+					},
+					buffers = {
+						sort_mru = true,
+						ignore_current_buffer = true,
+					},
+				},
+
+				extensions = {
+					fzf = {
+						fuzzy = true,
+						override_generic_sorter = true,
+						override_file_sorter = true,
+						case_mode = "smart_case",
+					},
+				},
+			})
+
+			pcall(telescope.load_extension, "fzf")
+		end,
+	},
 }
