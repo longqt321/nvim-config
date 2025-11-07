@@ -14,6 +14,7 @@ return {
 					"vimdoc",
 					"query",
 					"markdown",
+					"bash",
 				},
 				autoinstall = true,
 				highlight = { enable = true },
