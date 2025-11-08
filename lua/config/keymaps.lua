@@ -5,7 +5,6 @@ local map = vim.keymap.set
 -- Global map
 map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
-map("i", "`", "<Esc>", { desc = "Escape" })
 -- Move between splits
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-j>", "<C-w>j", {})
