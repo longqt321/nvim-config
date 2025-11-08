@@ -3,8 +3,8 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 
 -- Global map
-map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
+map("n", "ww", ":w<CR>", { desc = "Save file" })
+map("n", "qq", ":q<CR>", { desc = "Quit" })
 map("n", "<leader>wa", ":wa<CR>", { desc = "Write all" })
 map("i", "<F12>", "<Esc>", { desc = "Escape" })
 -- Move between windows
@@ -42,3 +42,17 @@ map("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Telescope live grep
 map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Telescope buffers" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Telescope help tags" })
 map("n", "<leader>fc", ":Telescope current_buffer_tags<CR>", { desc = "Tags in current buffer" })
+
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+map("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+
+-- Diagnostics
+map("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
+map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
