@@ -5,11 +5,33 @@ local map = vim.keymap.set
 -- Global map
 map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
--- Move between splits
+map("n", "<leader>wa", ":wa<CR>", { desc = "Write all" })
+map("i", "<F12>", "<Esc>", { desc = "Escape" })
+-- Move between windows
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-j>", "<C-w>j", {})
 map("n", "<C-k>", "<C-w>k", {})
 map("n", "<C-l>", "<C-w>l", {})
+-- Resize windows
+map("n", "<C-Up>", ":resize +2<CR>")
+map("n", "<C-Down>", ":resize -2<CR>")
+map("n", "<C-Left>", ":vertical resize -2<CR>")
+map("n", "<C-Right>", ":vertical resize +2<CR>")
+
+-- Navigate buffers
+map("n", "<S-l>", ":bnext<CR>")
+map("n", "<S-h>", ":bprevious<CR>")
+
+-- Close buffer
+map("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
+
+-- Better indenting (keep selection)
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- Move selected lines up/down
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Nvimtree map
 map("n", "<C-f>", ":NvimTreeOpen<CR>", {})
