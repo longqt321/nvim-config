@@ -81,13 +81,13 @@ return {
 		})
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		require("lspconfig").clangd.setup({
+		vim.lsp.config("lus_ls", {
 			capabilities = capabilities,
 		})
-		require("lspconfig").lua_ls.setup({
+		vim.lsp.config("cpp", {
 			capabilities = capabilities,
 		})
-		require("lspconfig").pyright.setup({
+		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 		})
 	end,
