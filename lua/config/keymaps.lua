@@ -1,6 +1,11 @@
+local helpers = require("config.helpers")
+
 -- Leader key
 vim.g.mapleader = " "
 local map = vim.keymap.set
+
+-- Run file code
+map("n", "<F9>", helpers.run_current_file, { desc = "Run current file" })
 
 -- Global map
 map("n", "ww", ":w<CR>", { desc = "Save file" })
