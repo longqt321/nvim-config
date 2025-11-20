@@ -90,5 +90,8 @@ return {
 		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 		})
+		vim.lsp.config("gopls", {
+			capabilities = capabilities,
+		})
 	end,
 }
