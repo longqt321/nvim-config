@@ -17,6 +17,7 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			cpp = { "clang_format" },
+			go = { "gofumpt,goimports" },
 		},
 		default_format_opts = {
 			lsp_format = "fallback",
