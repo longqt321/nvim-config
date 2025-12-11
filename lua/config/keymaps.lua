@@ -12,7 +12,7 @@ map("n", "ww", ":w<CR>", { desc = "Save file" })
 map("n", "qq", ":q<CR>", { desc = "Quit" })
 map("n", "<leader>wa", ":wa<CR>", { desc = "Write all" })
 map("i", "<F12>", "<Esc>", { desc = "Escape" })
-map("i", "jk", "<Esc>", { desc = "Escape" })
+map("i", "<jk>", "<Esc>", { desc = "Escape" })
 -- Move between windows
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-j>", "<C-w>j", {})
