@@ -31,13 +31,9 @@ return {
 			end, { desc = "Go to buffer " .. i })
 		end
 
-		-- 2. Chuyển đổi giữa các tab (file)
-		-- Lưu ý: "Alt+Tab" thường bị Hệ điều hành chặn để chuyển cửa sổ.
-		-- Giải pháp thay thế tốt nhất là dùng Alt + dấu chấm (.) và phẩy (,) hoặc Shift+h/l
 		map("n", "<A-.>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer tab" })
 		map("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer tab" })
 
-		-- Nếu terminal của bạn gửi được mã phím Alt+Tab, dòng dưới sẽ hoạt động:
 		map("n", "<M-Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer tab" })
 
 		-- Tùy chọn: Map lại Shift+h/l của bạn để dùng logic của bufferline (mượt hơn)
