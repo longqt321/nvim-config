@@ -8,6 +8,7 @@ return {
 		"L3MON4D3/LuaSnip", -- Snippet engine
 		"saadparwaiz1/cmp_luasnip", -- Snippet completions
 		"rafamadriz/friendly-snippets", -- Common snippets
+		"onsails/lspkind.nvim",
 	},
 	config = function()
 		-- Load friendly snippets
@@ -15,7 +16,7 @@ return {
 
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-
+		local lspkind = require("lspkind")
 		cmp.setup({
 			snippet = {
 				expand = function(args)
@@ -25,6 +26,13 @@ return {
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
+			},
+			formatting = {
+				format = lspkind.cmp_format({
+					mode = "symbol_text",
+					maxwidth = 50,
+					ellipsis_char = "...",
+				}),
 			},
 
 			mapping = cmp.mapping.preset.insert({
