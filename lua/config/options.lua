@@ -12,7 +12,6 @@ vim.opt.smartindent = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.wrap = false
-
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
