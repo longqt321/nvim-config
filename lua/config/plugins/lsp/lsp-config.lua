@@ -10,28 +10,15 @@ return {
 
 		local on_attach = function(client, bufnr)
 			local opts = { buffer = bufnr, noremap = true, silent = true }
-			local keymap = vim.keymap.set
-
-			opts.desc = "Go to definition"
-			keymap("n", "gd", vim.lsp.buf.definition, opts)
-
-			opts.desc = "Hover documentation"
-			keymap("n", "K", vim.lsp.buf.hover, opts)
-
-			opts.desc = "Go to implementation"
-			keymap("n", "gi", vim.lsp.buf.implementation, opts)
-
-			opts.desc = "Go to declaration"
-			keymap("n", "gD", vim.lsp.buf.declaration, opts)
-
-			opts.desc = "Code action"
-			keymap({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-
-			opts.desc = "Rename symbol"
-			keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
-
-			opts.desc = "Show references"
-			keymap("n", "gr", require("telescope.builtin").lsp_references, opts) -- Tối ưu: Dùng Telescope để xem references đẹp hơn
+			local map = vim.keymap.set
+			map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+			map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+			map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+			map("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+			map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+			map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+			map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+			map("n", "gr", require("telescope.builtin").lsp_references, { desc = "Find references" }) -- Tối ưu: Dùng Telescope để xem references đẹp hơn
 		end
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
