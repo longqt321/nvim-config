@@ -24,10 +24,6 @@ map("n", "<C-Down>", ":resize -2<CR>")
 map("n", "<C-Left>", ":vertical resize -2<CR>")
 map("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- Navigate buffers
-map("n", "<S-l>", ":bnext<CR>")
-map("n", "<S-h>", ":bprevious<CR>")
-
 -- Close buffer
 map("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 
