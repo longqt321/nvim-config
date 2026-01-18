@@ -19,13 +19,13 @@ return {
 			cpp = { "clang_format" },
 			go = { "gofumpt", "goimports" },
 		},
+		notify_on_error = false,
+		notify_no_formatters = false,
 		default_format_opts = {
 			lsp_format = "fallback",
 		},
 		format_on_save = {
 			lsp_fallback = true,
-			async = true,
-			delay = 0,
 			timeout_ms = 500,
 		},
 	},
