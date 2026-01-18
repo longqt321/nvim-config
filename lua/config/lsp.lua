@@ -1,6 +1,0 @@
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("clangd")
-vim.lsp.enable("pyright")
-vim.lsp.enable("bash-language-server")
-vim.lsp.enable("gopls")
-vim.lsp.enable("arduino-language-server")
