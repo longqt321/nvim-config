@@ -6,12 +6,12 @@ return {
 			enabled = true,
 			execution_message = {
 				message = function()
-					return ("Saved at " .. vim.fn.strftime("%H:%M:%S"))
+					return ""
 				end,
 				dim = 0.18,
-				cleaning_interval = 1250,
+				cleaning_interval = 0,
 			},
-			trigger_events = { "InsertLeave" },
+			trigger_events = { "InsertLeave", "TextChanged" },
 			condition = function(buf)
 				local fn = vim.fn
 				local utils = require("auto-save.utils.data")

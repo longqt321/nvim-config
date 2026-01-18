@@ -23,3 +23,6 @@ vim.opt.clipboard = "unnamedplus"
 -- Not sure what these do - chatGPT recommended
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+-- Persistent Undo: Giữ lịch sử undo sau khi save hoặc tắt máy
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
