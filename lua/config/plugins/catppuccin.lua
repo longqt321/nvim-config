@@ -60,7 +60,7 @@ return {
 					colored_indent_levels = false,
 				},
 				mason = true,
-				neotree = true,
+				-- neotree = true,
 				which_key = true,
 				mini = {
 					enabled = true,
