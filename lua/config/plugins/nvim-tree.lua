@@ -14,6 +14,7 @@ return {
 					enable = true,
 					update_root = false,
 				},
+				disable_netrw = false,
 			})
 
 			-- TỰ ĐỘNG ĐÓNG: Auto Close NvimTree
